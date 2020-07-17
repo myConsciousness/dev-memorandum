@@ -15,8 +15,6 @@
 
 今となってはあまり見慣れない方法かもしれませんが、 `EntrySet` を使用することで Map に格納されたキーと値を繰り返し処理の中で簡単に取得することができます。
 
-サンプルコード:
-
 ```java
 import java.util.HashMap;
 import java.util.Map;
