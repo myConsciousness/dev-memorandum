@@ -6,7 +6,7 @@
 
 ## 主な取得方法
 
-主に Map 構造のコレクションからキーや値を繰り返し処理で取得するためには以下の方法があります。
+主に Map 構造のコレクションからキーや値を繰り返し処理の中で取得するためには以下の方法があります。
 
 - `EntrySet` を使用する
 - `forEach()` メソッドを使用する (JDK 1.8 以降)
@@ -72,7 +72,7 @@ value3
 import java.util.HashMap;
 import java.util.Map;
 
-public final class TestEntrySet {
+public final class TestForEach {
 
     public static main(String[] args) {
         final Map<String, String> testMap = new HashMap<>();
@@ -110,4 +110,4 @@ value3
 
 上記のサンプルコードを見て気がついた方もいるかもしれませんが、`forEach()` メソッドを使用した繰り返し処理の中では返却値を返すことができません。
 
-例えば、繰り返し処理の中でエラーを検知したら真偽値として `false` を返却したいといったような場合では `forEach()` ではなく `EntrySet` を使用した方法をおすすめします。
+例えば、Map の繰り返し処理の中でエラーを検知したら真偽値として `false` を返却したいといったような場合では `forEach()` ではなく `EntrySet` を使用した方法をおすすめします。
