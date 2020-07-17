@@ -29,7 +29,7 @@ public final class TestEntrySet {
         testEntrySet.put("test2", "value2");
         testEntrySet.put("test3", "value3");
 
-        final Set<Entry<String, String>> tesEntrySet = testMap.entrySet();
+        final Set<Entry<String, String>> testEntrySet = testMap.entrySet();
 
         for (Map.Entry<String, String> entry : testEntrySet) {
             System.out.println(entry.getKey());
@@ -106,6 +106,6 @@ value3
 
 ## 注意点
 
-上記のサンプルコードを見て気がついた方もいるかもしれませんが、`forEach()` メソッドを使用した繰り返し処理の中では返却値を返すことができません。
+関数型インターフェースである `BiConsumer<T,U>` の特性から、`forEach()` メソッドを使用した繰り返し処理の中では返却値を返すことができません。関数型インターフェースの中には値を返却するものもありますが、`forEach()` メソッドとしてはただ Map のサイズ分だけ処理を繰り返すだけになります。
 
 例えば、Map の繰り返し処理の中でエラーを検知したら真偽値として `false` を返却したいといったような場合では `forEach()` ではなく `EntrySet` を使用した方法をおすすめします。
