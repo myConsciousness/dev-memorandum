@@ -23,8 +23,8 @@ import java.util.Set;
 
 public final class TestEntrySet {
 
-    public static main(String[] args) {
-        final Map<String, String> testMap = new HashMap<>();
+    public static void main(String[] args) {
+        final Map<String, String> testMap = new HashMap<>(3);
         testEntrySet.put("test1", "value1");
         testEntrySet.put("test2", "value2");
         testEntrySet.put("test3", "value3");
@@ -72,8 +72,8 @@ import java.util.Map;
 
 public final class TestForEach {
 
-    public static main(String[] args) {
-        final Map<String, String> testMap = new HashMap<>();
+    public static void main(String[] args) {
+        final Map<String, String> testMap = new HashMap<>(3);
         testEntrySet.put("test1", "value1");
         testEntrySet.put("test2", "value2");
         testEntrySet.put("test3", "value3");
