@@ -16,7 +16,7 @@
 - `拡張for文` を使用したシーケンシャルアクセス
 - `forEach(Consumer<? super T>)` メソッドを使用したシーケンシャルアクセス (JDK 1.8 以降)
 
-# get メソッドを使用したランダムアクセス
+# `get` メソッドを使用したランダムアクセス
 
 `拡張for文` や JDK 1.8 で `forEach` メソッドといった便利かつ効率的な機能が登場してからは List コレクションに対して `get` メソッドを使用しランダムアクセスで繰り返し処理を行うという場面はほとんどなくなりました。しかし、このランダムアクセスは実装を問わず List コレクションを用いた最も基本的な繰り返し処理の方法ですので、Java を使ってプログラミングをする方には必ず覚えておいてほしいです。
 
@@ -33,6 +33,64 @@ public final class TestGet {
         testList.add("test1");
         testList.add("test2");
         testList.add("test3");
+
+        for (int i = 0, size = testList.size(); i < size; i++) {
+            // 変数i番目の要素を取得（ランダムアクセス）
+            System.out.println(testList.get(i));
+        }
     }
 }
 ```
+
+上記のサンプルコードではまず 3 つの要素を格納することができるテスト用の List を `ArrayList` として実装し、テスト用の値を `add` しています。
+
+その後は基本的な for 文を使用し、先に用意した `testList` のサイズ分だけ処理を繰り返します。上記のサンプルコードですと繰り返し処理の度に変数 `i` はインクリメントされていきますので、コメントにもあるように `testList.get(i)` の処理は `testList` の要素に対して順次にランダムアクセスしていくものになります。
+
+そのため、上記のサンプルコードの実行結果は以下のように出力されます。
+
+```
+test1
+test2
+test3
+```
+
+## 注意点
+
+### ランダムアクセスを行う際にはアクセス可能な範囲を必ず明確にする
+
+上記のサンプルコードのように `get` メソッドを使用したランダムアクセスを使用する場合は必ずアクセス対象の List のサイズを確認してください。もし `get` メソッドに対象 List のサイズよりも大きいインデックスを指定した場合は実行時に必ず `IndexOutOfBoundsException` （範囲外例外）が発生し処理が失敗します。
+
+例えば、以下のような場合です。
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public final class TestIndexOutOfBoundsException {
+
+    public static void main(String[] args) {
+        final List<String> testList = new ArrayList<>();
+        testList.add("test1");
+        testList.add("test2");
+        testList.add("test3");
+
+        // 存在しない4個目のインデックスを指定
+        testList.get(3);
+    }
+}
+```
+
+上記のサンプルコードを実行すると以下の例外が発生します。
+
+```
+java.lang.IndexOutOfBoundsException: Index 3 out of bounds for length 3
+    at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+    at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+    at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+    at java.base/java.util.Objects.checkIndex(Objects.java:373)
+    at java.base/java.util.ArrayList.get(ArrayList.java:425)
+```
+
+ランダムアクセスを行う対象の List のサイズは先の正常終了するサンプルコードにもあるように `size()` メソッドで取得できます。なお、データベースから一意のキーをもとに一つのレコードのみが必ず取得できるといったような場合では、`size()` メソッドで List のサイズを検査せずに `testList.get(0);` といった処理で対象の値を取得することは認められます。
+
+重要な点は、ランダムアクセスを行う際には `IndexOutOfBoundsException` が実行時に発生しないようにアクセス可能な範囲を明確にすることです。
