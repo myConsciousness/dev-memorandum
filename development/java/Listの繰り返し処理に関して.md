@@ -102,3 +102,75 @@ Java の List コレクションの中には `LinkedList` という `ArrayList` 
 しかし、`LinkedList` に対するランダムアクセスはパフォーマンスが最悪です。ランダムアクセスする要素数が 100 件程度であれば `ArrayList` 使用時とほとんど変わらない処理時間になりますが、`LinkedList` で 10 万件以上の規模の大きいデータに対してランダムアクセス繰り返し処理を行うことはパフォーマンスの面から現実的ではありません。
 
 そのため、`LinkedList` で規模の大きいデータを繰り返し処理で扱う際には、`get` メソッドを使用したランダムアクセスではなく、後に紹介する `拡張for文` といったシーケンシャルアクセスで操作を行ってください。
+
+## 余談
+
+ランダムアクセスに関して正常終了する以下のサンプルコードを先に紹介しました。
+
+```java
+import java.util.List;
+import java.util.ArrayList;
+
+public final class TestGet {
+
+    public static void main(String[] args) {
+        final List<String> testList = new ArrayList<>(3);
+        testList.add("test1");
+        testList.add("test2");
+        testList.add("test3");
+
+        for (int i = 0, size = testList.size(); i < size; i++) {
+            // 変数i番目の要素を取得（ランダムアクセス）
+            System.out.println(testList.get(i));
+        }
+    }
+}
+```
+
+もしかしたら、上記のサンプルコードの for 文が初心者の方には見慣れない書き方なのではないかと思いましたので説明を残しておきます。
+
+上記のサンプルコードですが for 文の部分は以下のように書くことができます。
+
+```java
+for (int i = 0; i < testList.size(); i++) {
+    // do something
+}
+```
+
+しかし、上記の for 文の書き方は避けるべきです。なぜなら、for 文の条件式部分 `i < testList.size()` は繰り返し処理の度に実行されるため、上記コードの場合ですと `testList` のサイズ分だけ `size()` メソッドが呼び出されることになります。10 件や 100 件程度であればパフォーマンスに影響はほとんど無いですが、それでも小さな差も積もり積もれば大きな差になります。
+
+例えば、以下のようなサンプルコードで条件式部分の処理が毎回実行されていることを確認することができます。
+
+```java
+public final class Main {
+
+    public static void main(String[] args) throws Exception {
+        // 条件式部分が毎回実行されていることを確認
+        for (int i = 0; i < 10 && saySomething(); i++) {
+            // do something
+        }
+    }
+
+    private static boolean saySomething() {
+        System.out.println("Hello World!");
+        return true;
+    }
+}
+```
+
+上記のサンプルコードの実行結果は以下のように出力されます。普段の開発で上記のようなコードを書くことはないですが、条件式部分が 10 回実行されていることを確認できました。
+
+```
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+Hello World!
+```
+
+以上から、for 文開始時に 1 回だけ実行される初期化式部分で条件式部分で使用する件数を求めておくことで、無駄のないより効率的なプログラムを書くことができます。これは List コレクションにおける `size()` メソッドに限らず多様な場面で応用できるテクニックですので、より良いプログラムを目指す方々にはぜひとも日々心がけるようにしていただきたいです。
