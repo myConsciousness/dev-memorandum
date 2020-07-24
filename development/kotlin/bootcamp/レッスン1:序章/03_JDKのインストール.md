@@ -8,7 +8,7 @@
 javac -version
 ```
 
-`JDK` の最新バージョンは、`Java SE Downloads` のページで確認できます。最新バージョンをお持ちの方は、`「IntelliJ IDEA のインストール」` を参照してください。
+`JDK` の最新バージョンは、[Java SE Downloads](https://www.oracle.com/java/technologies/javase-downloads.html) のページで確認できます。最新バージョンをお持ちの方は、`「IntelliJ IDEA のインストール」` を参照してください。
 
 > **Note:** <br>最新の JDK と JRE のみをインストールすることをお勧めします。
 
@@ -18,10 +18,10 @@ javac -version
 
 最新の `JDK` をインストールする前に、古いバージョンの `JDK` をすべて削除してください。
 
-`Windows` の場合は、`「コントロールパネル」>「プログラムの追加と削除」` を選択します。
-`Mac` の手順については、`「JDK のアンインストール」` を参照してください。
+- `Windows` の場合は、`「コントロールパネル」>「プログラムの追加と削除」` を選択します。
+- `Mac` の手順については、[JDK のアンインストール](https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html#A1096903) を参照してください。
 
-古いバージョンの `JRE` をアンインストールする方法の詳細については、`「Mac で Java をアンインストールする方法」` または `「Windows コンピュータで Java をアンインストールする方法」` を参照してください。
+古いバージョンの `JRE` をアンインストールする方法の詳細については、[Mac で Java をアンインストールする方法](https://www.java.com/en/download/help/mac_uninstall_java.xml) または [Windows コンピュータで Java をアンインストールする方法](https://www.java.com/en/download/help/uninstall_java.xml) を参照してください。
 
 # Step 2: JDK をダウンロード
 
