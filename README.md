@@ -4,7 +4,10 @@
 
 **_`Rome wasn't built in a day!`_**
 
-This is a repository for recording know-how and memos during development. This repository does not contain any development resources.
+This is a repository for recording know-how and memos during development.
+
+> Note:<br>
+> This repository does not contain any development resources.
 
 ## License
 
