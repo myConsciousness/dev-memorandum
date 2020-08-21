@@ -20,6 +20,7 @@ This is a repository for recording know-how and memos during development.
 - [Git 基本用語集](https://github.com/myConsciousness/dev-memorandum/blob/master/development/git/%E5%9F%BA%E6%9C%AC%E7%94%A8%E8%AA%9E%E9%9B%86.md)
 - [リネーム後に過去の履歴付きでコミット](https://github.com/myConsciousness/dev-memorandum/blob/master/development/git/%E3%83%AA%E3%83%8D%E3%83%BC%E3%83%A0%E5%BE%8C%E3%81%AB%E9%81%8E%E5%8E%BB%E3%81%AE%E5%B1%A5%E6%AD%B4%E4%BB%98%E3%81%8D%E3%81%A7%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88.md)
 - [コミット履歴を引き継いでリポジトリを複製](https://github.com/myConsciousness/dev-memorandum/blob/master/development/git/%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E5%B1%A5%E6%AD%B4%E3%82%92%E5%BC%95%E3%81%8D%E7%B6%99%E3%81%84%E3%81%A7%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E8%A4%87%E8%A3%BD.md)
+- [Issue のテンプレートを作成](https://github.com/myConsciousness/dev-memorandum/blob/master/development/git/Issue%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B.md)
 
 ## License
 
