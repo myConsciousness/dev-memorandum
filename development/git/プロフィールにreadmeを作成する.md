@@ -28,4 +28,4 @@ You found a secret! yourUserName/yourUserName is a ✨special ✨ repository tha
 
 あとはいつものようにリポジトリの公開可否やらを選択してリポジトリを作成すれば導入は完了です。
 
-あとは `README.md` を自分の好きなように編集してプロフィールを作成してください！
+`README.md` を自分の好きなように編集してプロフィールを作成してください！
