@@ -20,7 +20,7 @@
 - 継承（mixin）で冗長な処理を減らせる
 - ファイルを分割管理できる
 
-## `Sass` と `Scss` の違い
+## `SASS` と `SCSS` の違い
 
 `Saas` について調べていると出てくる `SASS` と `SCSS` のワード。<br>
 それぞれ言葉の意味や概念が違ったのでまとめておく。
@@ -34,7 +34,28 @@
 `Sass` の記法の内の1つで、`Python` のようにインデントでブロックを表現する。<br>
 処理の終わりでセミコロンを必要としない。
 
+```sass
+div
+    margin: 0 auto
+    p
+        padding: 20px
+        span
+            font-color: red;
+```
+
 ### ***3. `SCSS`***
 
 `Sass` の記法の内の1つで、波括弧でブロックを表現する。<br>
 処理の終わりでセミコロンを必要としない。
+
+```sass
+div {
+    margin: 0 auto;
+    p {
+        padding: 20px;
+        span {
+             font-color: red;
+        }
+    }
+}
+```
