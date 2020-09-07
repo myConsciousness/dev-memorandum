@@ -40,7 +40,7 @@ div
     p
         padding: 20px
         span
-            font-color: red;
+            font-color: red
 ```
 
 ### ***3. `SCSS`***
@@ -48,7 +48,7 @@ div
 `Sass` の記法の内の1つで、波括弧でブロックを表現する。<br>
 処理の終わりでセミコロンを必要としない。
 
-```sass
+```scss
 div {
     margin: 0 auto;
     p {
