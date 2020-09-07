@@ -37,6 +37,8 @@ This is a repository for recording know-how and memos during development.
 
 ### 7. Sass
 
+- [Sassについて](https://github.com/myConsciousness/dev-memorandum/blob/master/development/sass/Sass%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md)
+
 ## License
 
 ```
