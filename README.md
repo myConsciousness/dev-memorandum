@@ -31,6 +31,12 @@ This is a repository for recording know-how and memos during development.
 
 - [サーバーレスな問合せフォームを作成する](https://github.com/myConsciousness/dev-memorandum/blob/master/development/html/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AC%E3%82%B9%E3%81%AE%E5%95%8F%E5%90%88%E3%81%9B%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B.md)
 
+### 5. CSS
+
+### 6. JavaScript
+
+### 7. Sass
+
 ## License
 
 ```
