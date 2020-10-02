@@ -1,4 +1,4 @@
-b# implementation と api について
+# implementation と api について
 
 ## 概要
 
@@ -16,5 +16,29 @@ b# implementation と api について
 そのため、以下では非推奨になったキーワードに関しては割愛し、`implementation` キーワードと `api` キーワードの差異をまとめるに留める。
 
 ### 1. implementation
+
+`implementation` キーワードを使用して記述された依存関係は**_伝播しない_**。
+
+例えば、`プロジェクトA` と `プロジェクトB` があると仮定して、以下のように依存関係が定義されているとする。
+
+**_プロジェクト A_**
+
+```groovy
+dependencies {
+    implementation プロジェクトB
+}
+```
+
+**_プロジェクト B_**
+
+```groovy
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.7'
+}
+```
+
+上記の定義について補足すると、`commons-lang3` に依存している `プロジェクトB` に `プロジェクトA` が依存しているという図である。この場合の `プロジェクトB` で定義された依存関係は `プロジェクトA` に伝播しない。
+
+`commons-lang3` に依存している `プロジェクトB` を使用している `プロジェクトA` にこの依存関係が伝播しないとは、つまり、**_`プロジェクトA` で `プロジェクトB` が依存している `commons-lang3` の機能を使用するためには別途 `プロジェクトA` で `commons-lang3` の依存関係を記述する必要があるということである。_**
 
 ### 2. api
