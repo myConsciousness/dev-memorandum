@@ -1,4 +1,4 @@
-# implementation と api について
+# `implementation` と `api` について
 
 ## 概要
 
@@ -6,7 +6,7 @@
 
 詳細は後述するが、この両者の概念の違いは `依存関係の伝播可否` であった。
 
-## implementation と api キーワードの違い
+## `implementation` と `api` の違い
 
 まず、`Gradle` で依存関係を記述する際には `implementation` や `api`　以外にも `compile`　や `runtime` が存在するが、現在では `implementation` と `api` キーワード以外は非推奨になっている。当時のトレンドの推移に関してはわからないが、`Gradle 3.4` で `Java Library Plugin` が追加されたことで先に挙げた `implementation` と `api` 以外のキーワードが公式に非推奨になったようだ。
 
@@ -15,7 +15,7 @@
 
 そのため、以下では非推奨になったキーワードに関しては割愛し、`implementation` キーワードと `api` キーワードの差異をまとめるに留める。
 
-### 1. implementation
+### 1. `implementation`
 
 `implementation` キーワードを使用して記述された依存関係は **_伝播しない_** 。
 
@@ -41,7 +41,7 @@ dependencies {
 
 `commons-lang3` に依存している `プロジェクトB` を使用している `プロジェクトA` にこの依存関係が伝播しないとは、つまり、**_`プロジェクトA` で `プロジェクトB` が依存している `commons-lang3` の機能を使用するためには別途 `プロジェクトA` で `commons-lang3` の依存関係を記述しなければならないということである。_**
 
-### 2. api
+### 2. `api`
 
 `api` キーワードを使用して記述された依存関係は **_伝播する_** 。
 また、`api` キーワードを使用する場合は `java-library` をプラグインに追加する必要がある。
@@ -70,7 +70,7 @@ dependencies {
 
 `commons-lang3` に依存している `プロジェクトB` を使用している `プロジェクトA` にこの依存関係が伝播するとは、つまり、**_`プロジェクトB` が依存している `commons-lang3` の依存関係を `プロジェクトA` の依存関係に追加しなくても `commons-lang3` の機能を使用することができるということである。_**
 
-## implementation のメリット
+## `implementation` のメリット
 
 公式ドキュメントでは、`compile` ではなく `implementation` を使うことについて、次のようなメリットがあると説明している。
 
