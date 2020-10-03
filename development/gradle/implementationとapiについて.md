@@ -1,4 +1,4 @@
-# `implementation` と `api` について
+# `Gradle` における `implementation` と `api` について
 
 ## 概要
 
