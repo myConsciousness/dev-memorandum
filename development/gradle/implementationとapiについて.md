@@ -89,6 +89,28 @@ dependencies {
 
 ## `implementation` と `api` の使い分け
 
-基本的には `implementation` を使用して依存関係を宣言すればよさそうである。
+**_基本的には `implementation` を使用して依存関係を宣言すればよさそうである。_**
 
 `api` キーワードを使用して依存関係を伝播させる場面がまだ掴めていないが、機能に依存している共通機能を使用するプロジェクトでも使用できるように伝播させるといった使い道があるのではないかと思う。
+
+例えば、共通ライブラリ `common-something` に依存している `プロジェクトB` を使用する `プロジェクトA` でも依存関係を明示することなく `common-something` を使用したい場合は以下のような場合である。
+
+**_プロジェクト A_**
+
+```groovy
+dependencies {
+    implementation プロジェクトB
+}
+```
+
+**_プロジェクト B_**
+
+```groovy
+apply plugin: 'java-library'
+
+dependencies {
+    api 'common-something'
+}
+```
+
+上記のように依存関係を定義することで、使用者である `プロジェクトA` は共通機能の依存関係を意識しなくてもよくなる。
