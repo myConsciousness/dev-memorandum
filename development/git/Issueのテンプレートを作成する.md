@@ -12,7 +12,7 @@
   - `.github`
     - `ISSUE_TEMPLATE`
 
-> Note:<br>
+> Note:</br>
 > 作成したテンプレートは `Github` の機能が参照するためファイル名は上記の通りにする必要がある
 
 **_参考ツリー_**
@@ -50,7 +50,7 @@ assignees: "myConsciousness"
 
 `YAML frontmatter` を追加することで `Issue` の初期設定を定義することができる。
 
-> Note:<br>
+> Note:</br>
 > この `YAML frontmatter` は別名で `metadata block` と呼ばれており、文章自体には含まれない、著者、キーワード、タイトルなどの情報を記述するための、メタ変数の並びを表現するための記述。3 つのハイフン(---)を書いた行で始まり、3 つのハイフンまたはピリオドを書いた行で終わる
 
 ```yaml
