@@ -1,24 +1,27 @@
 # Introduction to SQL
 
+これは `Codecademy` での `SQL学習コース` の要所を抜粋したメモになります。</br>
+そのため、「コードエディタ」や「実行ボタン」といった単語が出てきますが、実際に提示された課題を解く場合には実際に `Codecademy` でコースを受講するか自分のローカルマシンに問題と同じデータベースとテーブルを定義してください。
+
 ## Summary
 
-SQL, Structured Query Language, is a programming language designed to manage data stored in relational databases. SQL operates through simple, declarative statements. This keeps data accurate and secure, and helps maintain the integrity of databases, regardless of size.
+`SQL（Structured Query Language）` は、リレーショナルデータベースに格納されたデータを管理するために設計されたプログラミング言語です。SQL は、シンプルな宣言文で動作します。これにより、データの正確性と安全性が保たれ、サイズに関係なくデータベースの整合性を維持することができます。
 
-The SQL language is widely used today across web frameworks and database applications. Knowing SQL gives you the freedom to explore your data, and the power to make better decisions. By learning SQL, you will also learn concepts that apply to nearly every data storage system.
+`SQL言語` は、今日では Web フレームワークやデータベースアプリケーションで広く使われています。SQL を知ることで、データを探求する自由と、より良い意思決定をする力を得ることができます。また、SQL を学ぶことで、ほぼすべてのデータストレージシステムに適用される概念を学ぶことができます。
 
-The statements covered in this course use SQLite Relational Database Management System (RDBMS). You can also access a glossary of all the SQL commands taught in this course.
+このコースでは、`SQLite リレーショナルデータベース管理システム（RDBMS）` を使用しています。また、このコースで学習するすべての SQL コマンドの用語集にアクセスすることができます。
 
 ## Instructions
 
-Let’s begin by entering a SQL command.
+まず、SQL コマンドを入力してみましょう。
 
-In the code editor, type:
+コードエディタで、次のように入力します。
 
 ```sql
 SELECT * FROM celebs;
 ```
 
-You will run all of your SQL commands in this course by pressing the Run button at the bottom of the code editor.
+コードエディタの下部にある「実行」ボタンを押すと、このコースのすべての SQL コマンドが実行されます。
 
 Press Run.
 
@@ -31,7 +34,7 @@ Press Run.
 | 3   | Jeremy Lin      | 26  |
 | 4   | Taylor Swift    | 26  |
 
-**_Database Schema:_**
+**_Database Schema of celebs:_**
 
 | name | type    |
 | ---- | ------- |
