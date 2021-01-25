@@ -1,3 +1,5 @@
+<img width="955" alt="dev-city" src="https://user-images.githubusercontent.com/13072231/105673178-01987a80-5f29-11eb-9e49-969a62bbe1da.png">
+
 # Development Memorandum
 
 ## What is it?
@@ -6,7 +8,7 @@
 
 This is a repository for recording know-how and memos during development.
 
-> ***Note:***<br>
+> **_Note:_**</br>
 > This repository does not contain any development resources.
 
 ## Index
@@ -37,11 +39,11 @@ This is a repository for recording know-how and memos during development.
 
 ### 7. Sass
 
-- [Sassについて](https://github.com/myConsciousness/dev-memorandum/blob/master/development/sass/Sass%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md)
+- [Sass について](https://github.com/myConsciousness/dev-memorandum/blob/master/development/sass/Sass%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md)
 
 ## License
 
-```
+```txt
 Copyright 2020 Kato Shinya.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
